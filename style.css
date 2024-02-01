@@ -5,12 +5,17 @@
 }
 nav{
     width: 100vh;
+    background-color: blue;
 }
 
 header{
     margin-left: 100px;
     margin-top: 10px;
-    text-transform: uppercase;
+}
+header> img{
+    width: 30vh;
+    height: 80px;
+    margin-bottom: 20px;
 }
 
 img{
@@ -22,11 +27,32 @@ p{
 }
 button{
     margin-top: 4px;
-    width: 30vh;
+    width: 20vh;
 }
 svg{
     background-color: blue;
     border: 2px solid blue;
     border-radius: 30%;
     margin-left: 20px;
+}
+
+@media screen and ( min-width: 700px) {
+    header > img{
+        width: 80vh;
+        height: 200px;
+       justify-content: center;
+    }
+    
+}
+@media screen and (min-width: 1000px ) {
+    header > img{
+        width: 100vh;
+        height: 200px;
+       justify-content: center;
+    }
+    
+    img{
+        columns: 2;
+        flex-direction: row;
+    }
 }
