@@ -4,19 +4,28 @@
     padding: 0;
 }
 nav{
+    display: fixed;
+    z-index: 10px;
     width: 100vh;
     background-color: blue;
 }
 
 header{
-    margin-left: 100px;
+    margin-left: 0px;
     margin-top: 10px;
 }
 header> img{
     width: 30vh;
     height: 80px;
     margin-bottom: 20px;
+    animation-name: img1 ;
+    animation-duration: 3s ;
+    animation-timing-function: linear ;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both ;
+
 }
+
 
 img{
     border-radius: 8px;
@@ -29,18 +38,46 @@ button{
     margin-top: 4px;
     width: 20vh;
 }
+
 svg{
     background-color: blue;
     border: 2px solid blue;
     border-radius: 30%;
     margin-left: 20px;
+
 }
+
+
+@keyframes img1{
+    from{ 
+        transform: translateX(-100vh);
+
+
+    }
+    to{
+        transform: translateX(150vh);
+
+    }
+}
+@keyframes blu{
+    from{
+        transform: rotatey(0deg);
+    }
+    to{
+        transform: rotatey(360deg);
+    }
+}
+
+
 
 @media screen and ( min-width: 700px) {
     header > img{
         width: 80vh;
         height: 200px;
        justify-content: center;
+    }
+    button{
+        width: 45vh;
     }
     
 }
@@ -49,10 +86,39 @@ svg{
         width: 100vh;
         height: 200px;
        justify-content: center;
+       
+    }
+    .img1{
+        width: 100vh;
+        animation-name: img1 ;
+        animation-duration: 3s ;
+        animation-timing-function: linear ;
+        animation-iteration-count: infinite;
+        animation-fill-mode: both ;
+    
+    }
+    .blu{
+
+        animation-name: blu;
+        animation-duration: 10s;
+        animation-timing-function: linear ;
+        animation-iteration-count: 4;
+        animation-fill-mode: both ;
     }
     
     img{
         columns: 2;
         flex-direction: row;
     }
+    p{
+        padding-top: 20px;
+    }
+    button{
+        width: 60vh;
+    }
 }
+
+
+
+
+    
